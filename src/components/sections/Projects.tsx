@@ -1,11 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
@@ -39,40 +34,9 @@ const projects = [
 ]
 
 export function Projects() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const cardsRef = useRef<(HTMLAnchorElement | null)[]>([])
-
-  useEffect(() => {
-    if (!sectionRef.current) return
-
-    const cards = cardsRef.current.filter(Boolean) as HTMLAnchorElement[]
-    if (cards.length === 0) return
-
-    // Set initial state
-    gsap.set(cards, { opacity: 0, y: 40 })
-
-    // Animate on scroll
-    const trigger = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: 'top 80%',
-      onEnter: () => {
-        gsap.to(cards, {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: 'power2.out',
-        })
-      },
-      once: true,
-    })
-
-    return () => trigger.kill()
-  }, [])
 
   return (
     <section
-      ref={sectionRef}
       id="projects"
       className="relative min-h-screen px-6 py-32"
     >
@@ -90,7 +54,6 @@ export function Projects() {
           {projects.map((project, index) => (
             <Link
               key={index}
-              ref={(el) => { cardsRef.current[index] = el }}
               href={project.link}
               target={project.link.startsWith('http') ? '_blank' : undefined}
               rel={project.link.startsWith('http') ? 'noopener noreferrer' : undefined}
