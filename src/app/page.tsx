@@ -7,13 +7,15 @@ import { DitherSphere } from '@/components/ui/DitherSphere'
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative">
       <DitherSphere />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+      <div className="relative z-10">
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+      </div>
     </main>
   )
 }
