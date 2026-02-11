@@ -26,8 +26,8 @@ const projects = [
   },
   {
     title: 'SC Robotics',
-    description: 'Contributing to Saddleback College Robotics team. Building science payloads and GUIs for competition robots.',
-    tags: ['Python', 'C++', 'Hardware', 'Team'],
+    description: 'Building the GUI and integrating science system hardware with the new control system for Saddleback College Robotics competition rover.',
+    tags: ['Python', 'ROS2', 'Foxglove', 'Hardware'],
     link: 'https://github.com/SaddlebackCollegeRobotics',
     color: '#F59E0B', // Amber
   },
