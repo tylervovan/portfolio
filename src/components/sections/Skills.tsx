@@ -11,7 +11,7 @@ const strongSkills = [
   { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB', url: 'https://python.org' },
   { name: 'C++', icon: 'https://cdn.simpleicons.org/cplusplus/00599C', url: 'https://isocpp.org' },
   { name: 'ROS2', icon: 'https://cdn.simpleicons.org/ros/22314E', url: 'https://ros.org' },
-  { name: 'Foxglove', icon: 'https://cdn.simpleicons.org/foxglove/9D4EDD', url: 'https://foxglove.dev' },
+  { name: 'Foxglove', icon: '/icons/foxglove.png', url: 'https://foxglove.dev' },
   { name: 'Cloudflare', icon: 'https://cdn.simpleicons.org/cloudflare/F38020', url: 'https://cloudflare.com' },
 ]
 
