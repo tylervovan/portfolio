@@ -10,6 +10,7 @@ export function DitherSphere() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const positionRef = useRef({ x: 0 })
+  const opacityRef = useRef(1)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -37,15 +38,18 @@ export function DitherSphere() {
     const maxDotSize = 4
     let rotation = 0
 
-    // Animate position based on scroll
+    // Animate position and fade out after hero
     const scrollTrigger = ScrollTrigger.create({
       trigger: document.body,
       start: 'top top',
-      end: 'bottom bottom',
+      end: '50% top', // Fade out by halfway down the page
       scrub: 1,
       onUpdate: (self) => {
-        // Start centered (0), move to right (+30%) as you scroll down
-        positionRef.current.x = self.progress * window.innerWidth * 0.3
+        // Fade out as you scroll past hero (0-100% of first half = 1-0 opacity)
+        opacityRef.current = 1 - self.progress
+        if (containerRef.current) {
+          containerRef.current.style.opacity = String(opacityRef.current)
+        }
       },
     })
 
