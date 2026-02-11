@@ -66,7 +66,7 @@ export function Hero() {
         ref={subtitleRef}
         className="mt-6 max-w-xl text-center text-lg text-neutral-400 sm:text-xl"
       >
-        CS Student · Builder · Creating things that matter
+        CS Student · Polymarket Builder · Creating things that matter
       </p>
 
       <div className="mt-12 flex gap-6">
