@@ -90,32 +90,35 @@ export function About() {
               <span className="text-neutral-400">one project at a time</span>
             </h3>
             <p className="mt-6 text-lg leading-relaxed text-neutral-400">
-              First-year Data Science student at Saddleback College. SC Robotics 
-              engineer (18th globally at URC 2025). Startup cofounder. I build 
-              prediction market tools, health AI apps, and mission control systems.
+              I&apos;m a first-year Computer Science student at Saddleback College 
+              with a passion for building impactful software. From prediction market 
+              tools to mobile health apps, I love tackling complex problems with 
+              elegant solutions.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-neutral-400">
-              I ship fast and learn faster.
+              When I&apos;m not coding, you&apos;ll find me contributing to 
+              the Saddleback Robotics team or exploring the latest in AI 
+              and quantitative trading.
             </p>
           </div>
 
           {/* Stats grid with parallax */}
           <div ref={imageRef} className="stats-grid grid grid-cols-2 gap-6">
             <div className="stat-item rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 backdrop-blur-sm">
-              <div className="text-4xl font-bold text-white">18th</div>
-              <div className="mt-2 text-sm text-neutral-400">Global (URC)</div>
+              <div className="text-4xl font-bold text-[#2E5CFF]">1</div>
+              <div className="mt-2 text-sm text-neutral-400">Startup</div>
             </div>
             <div className="stat-item rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 backdrop-blur-sm">
-              <div className="text-4xl font-bold text-white">3.85</div>
-              <div className="mt-2 text-sm text-neutral-400">GPA</div>
+              <div className="text-4xl font-bold text-white">3</div>
+              <div className="mt-2 text-sm text-neutral-400">Languages</div>
             </div>
             <div className="stat-item rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 backdrop-blur-sm">
-              <div className="text-4xl font-bold text-white">$433K</div>
-              <div className="mt-2 text-sm text-neutral-400">Budget Managed</div>
+              <div className="text-4xl font-bold text-white">1yr</div>
+              <div className="mt-2 text-sm text-neutral-400">Experience</div>
             </div>
             <div className="stat-item rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 backdrop-blur-sm">
-              <div className="text-4xl font-bold text-[#2E5CFF]">2</div>
-              <div className="mt-2 text-sm text-neutral-400">Startups</div>
+              <div className="text-4xl font-bold text-white">∞</div>
+              <div className="mt-2 text-sm text-neutral-400">Curiosity</div>
             </div>
           </div>
         </div>
