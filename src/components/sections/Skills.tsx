@@ -83,6 +83,7 @@ export function Skills() {
               className="skill-icon group flex flex-col items-center gap-2"
             >
               <div className="flex h-16 w-16 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-900/50 p-3 transition-all duration-300 hover:border-neutral-600 hover:bg-neutral-800/50 hover:scale-110">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={skill.icon}
                   alt={skill.name}
