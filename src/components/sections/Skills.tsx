@@ -31,6 +31,9 @@ const otherSkills = [
   { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
   { name: 'Google Cloud', icon: 'https://cdn.simpleicons.org/googlecloud/4285F4' },
   { name: 'Stripe', icon: 'https://cdn.simpleicons.org/stripe/635BFF' },
+  { name: 'YOLOv8', icon: 'https://cdn.simpleicons.org/yolo/00FFFF' },
+  { name: 'Sentry', icon: 'https://cdn.simpleicons.org/sentry/362D59' },
+  { name: 'Resend', icon: 'https://cdn.simpleicons.org/resend/white' },
 ]
 
 export function Skills() {
