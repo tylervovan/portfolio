@@ -1,8 +1,10 @@
 import { Hero } from '@/components/sections/Hero'
+import { DitherSphere } from '@/components/ui/DitherSphere'
 
 export default function Home() {
   return (
     <main>
+      <DitherSphere />
       <Hero />
       
       {/* About Section - Coming Soon */}
