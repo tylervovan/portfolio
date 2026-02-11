@@ -40,36 +40,34 @@ const projects = [
 
 export function Projects() {
   const sectionRef = useRef<HTMLElement>(null)
+  const cardsRef = useRef<(HTMLAnchorElement | null)[]>([])
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animate section title
-      gsap.from('.projects-title', {
-        opacity: 0,
-        y: 40,
-        duration: 1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.projects-title',
-          start: 'top 85%',
-        },
-      })
+    if (!sectionRef.current) return
 
-      // Stagger project cards
-      gsap.from('.project-card', {
-        opacity: 0,
-        y: 60,
-        duration: 0.8,
-        ease: 'power3.out',
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: '.projects-grid',
-          start: 'top 80%',
-        },
-      })
-    }, sectionRef)
+    const cards = cardsRef.current.filter(Boolean) as HTMLAnchorElement[]
+    if (cards.length === 0) return
 
-    return () => ctx.revert()
+    // Set initial state
+    gsap.set(cards, { opacity: 0, y: 40 })
+
+    // Animate on scroll
+    const trigger = ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: 'top 80%',
+      onEnter: () => {
+        gsap.to(cards, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: 'power2.out',
+        })
+      },
+      once: true,
+    })
+
+    return () => trigger.kill()
   }, [])
 
   return (
@@ -88,10 +86,11 @@ export function Projects() {
           </h3>
         </div>
 
-        <div className="projects-grid grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="projects-grid grid gap-8 md:grid-cols-2">
           {projects.map((project, index) => (
             <Link
               key={index}
+              ref={(el) => { cardsRef.current[index] = el }}
               href={project.link}
               target={project.link.startsWith('http') ? '_blank' : undefined}
               rel={project.link.startsWith('http') ? 'noopener noreferrer' : undefined}
