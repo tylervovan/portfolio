@@ -44,8 +44,8 @@ export function DitherSphere() {
       end: 'bottom bottom',
       scrub: 1,
       onUpdate: (self) => {
-        // Move from left (-30% of viewport) to right (+30% of viewport)
-        positionRef.current.x = (self.progress - 0.5) * window.innerWidth * 0.6
+        // Start centered (0), move to right (+30%) as you scroll down
+        positionRef.current.x = self.progress * window.innerWidth * 0.3
       },
     })
 
