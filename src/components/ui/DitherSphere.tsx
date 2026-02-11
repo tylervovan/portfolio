@@ -104,7 +104,8 @@ export function DitherSphere() {
 
           ctx.beginPath()
           ctx.arc(x, y, dotSize * depthFade, 0, Math.PI * 2)
-          ctx.fillStyle = `rgba(255, 255, 255, ${brightness * depthFade})`
+          // Polymarket blue: #2E5CFF (RGB: 46, 92, 255)
+          ctx.fillStyle = `rgba(46, 92, 255, ${brightness * depthFade})`
           ctx.fill()
         }
       }
