@@ -57,7 +57,7 @@ export function Projects() {
               href={project.link}
               target={project.link.startsWith('http') ? '_blank' : undefined}
               rel={project.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="project-card group relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-neutral-700 hover:shadow-2xl"
+              className="project-card group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:bg-white/10 hover:shadow-2xl hover:shadow-black/20"
             >
               {/* Gradient overlay on hover */}
               <div
@@ -82,7 +82,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-neutral-800 px-3 py-1 text-xs text-neutral-300 transition-colors duration-300 group-hover:bg-neutral-700"
+                      className="rounded-full bg-white/10 px-3 py-1 text-xs text-neutral-300 backdrop-blur-sm transition-colors duration-300 group-hover:bg-white/20"
                     >
                       {tag}
                     </span>
