@@ -16,6 +16,13 @@ const projects = [
     color: '#2E5CFF', // Polymarket blue
   },
   {
+    title: 'Genki Reference',
+    description: 'Japanese language learning tool for Genki textbook users. Quick reference for vocabulary, kanji, and grammar with search and flashcard features.',
+    tags: ['TypeScript', 'React', 'Education', 'i18n'],
+    link: 'https://github.com/tylervovan/genki_reference',
+    color: '#EF4444', // Red (Japanese flag inspired)
+  },
+  {
     title: 'Medivision',
     description: 'AI-powered health screening mobile app. Uses computer vision to detect potential health issues from user-submitted images.',
     tags: ['React Native', 'TypeScript', 'AI/ML', 'Mobile'],
