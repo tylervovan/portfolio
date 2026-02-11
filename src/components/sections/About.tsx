@@ -92,13 +92,11 @@ export function About() {
             <p className="mt-6 text-lg leading-relaxed text-neutral-400">
               I&apos;m a first-year Computer Science student at Saddleback College 
               with a passion for building impactful software. From prediction market 
-              tools to mobile health apps, I love tackling complex problems with 
-              elegant solutions.
+              tools to robotics, I love tackling complex problems with friendly solutions.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-neutral-400">
-              When I&apos;m not coding, you&apos;ll find me contributing to 
-              the Saddleback Robotics team or exploring the latest in AI 
-              and quantitative trading.
+              When I&apos;m not on the grind, you&apos;ll find me snowboarding, 
+              eating udon, or playing poker with friends.
             </p>
           </div>
 
