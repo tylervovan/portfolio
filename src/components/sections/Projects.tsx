@@ -57,11 +57,22 @@ export function Projects() {
               href={project.link}
               target={project.link.startsWith('http') ? '_blank' : undefined}
               rel={project.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="project-card group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:bg-white/10 hover:shadow-2xl hover:shadow-black/20"
+              className="project-card group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 p-6 backdrop-blur-xl backdrop-saturate-[180%] shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_16px_48px_rgba(0,0,0,0.4)]"
             >
+              {/* Glass shine effect */}
+              <div
+                className="pointer-events-none absolute inset-0 rounded-2xl"
+                style={{
+                  boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.1), inset 0 -1px 1px rgba(0,0,0,0.1)',
+                }}
+              />
+              
+              {/* Top edge highlight */}
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+
               {/* Gradient overlay on hover */}
               <div
-                className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-10"
+                className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-15"
                 style={{ background: `linear-gradient(135deg, ${project.color}, transparent)` }}
               />
 
@@ -82,7 +93,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-white/10 px-3 py-1 text-xs text-neutral-300 backdrop-blur-sm transition-colors duration-300 group-hover:bg-white/20"
+                      className="rounded-full bg-white/[0.08] px-3 py-1 text-xs text-neutral-300 border border-white/[0.05] transition-colors duration-300 group-hover:bg-white/15 group-hover:border-white/10"
                     >
                       {tag}
                     </span>
