@@ -9,15 +9,15 @@ gsap.registerPlugin(ScrollTrigger)
 // Strong skills first (bigger, highlighted)
 const strongSkills = [
   { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB' },
+  { name: 'C++', icon: 'https://cdn.simpleicons.org/cplusplus/00599C' },
   { name: 'ROS2', icon: 'https://cdn.simpleicons.org/ros/22314E' },
-  { name: 'Supabase', icon: 'https://cdn.simpleicons.org/supabase/3FCF8E' },
+  { name: 'Foxglove', icon: 'https://cdn.simpleicons.org/foxglove/9D4EDD' },
   { name: 'Cloudflare', icon: 'https://cdn.simpleicons.org/cloudflare/F38020' },
 ]
 
 // Other skills
 const otherSkills = [
   { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6' },
-  { name: 'C++', icon: 'https://cdn.simpleicons.org/cplusplus/00599C' },
   { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
   { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/white' },
   { name: 'React Native', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
@@ -26,7 +26,7 @@ const otherSkills = [
   { name: 'Git', icon: 'https://cdn.simpleicons.org/git/F05032' },
   { name: 'Docker', icon: 'https://cdn.simpleicons.org/docker/2496ED' },
   { name: 'Proxmox', icon: 'https://cdn.simpleicons.org/proxmox/E57000' },
-  { name: 'Foxglove', icon: 'https://cdn.simpleicons.org/foxglove/8B5CF6' },
+  { name: 'Supabase', icon: 'https://cdn.simpleicons.org/supabase/3FCF8E' },
   { name: 'Vercel', icon: 'https://cdn.simpleicons.org/vercel/white' },
   { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
   { name: 'Google Cloud', icon: 'https://cdn.simpleicons.org/googlecloud/4285F4' },
