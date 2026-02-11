@@ -6,21 +6,17 @@ export function LiquidGlass() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Subtle mouse parallax for the blobs
+    // Subtle mouse parallax for the blobs - all move together uniformly
     const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current) return
       const { clientX, clientY } = e
       const { innerWidth, innerHeight } = window
       
-      const xPercent = (clientX / innerWidth - 0.5) * 20
-      const yPercent = (clientY / innerHeight - 0.5) * 20
+      const xPercent = (clientX / innerWidth - 0.5) * 15
+      const yPercent = (clientY / innerHeight - 0.5) * 15
       
-      const blobs = containerRef.current.querySelectorAll('.glass-blob')
-      blobs.forEach((blob, i) => {
-        const el = blob as HTMLElement
-        const factor = (i + 1) * 0.5
-        el.style.transform = `translate(${xPercent * factor}px, ${yPercent * factor}px)`
-      })
+      // Move the entire container so all blobs move together
+      containerRef.current.style.transform = `translate(${xPercent}px, ${yPercent}px)`
     }
 
     window.addEventListener('mousemove', handleMouseMove)
@@ -30,20 +26,20 @@ export function LiquidGlass() {
   return (
     <div
       ref={containerRef}
-      className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
+      className="pointer-events-none fixed inset-0 z-0 overflow-hidden transition-transform duration-500 ease-out"
       aria-hidden="true"
     >
-      {/* Gradient blobs with blur */}
+      {/* Gradient blobs with blur - subtle ambient glow */}
       <div
-        className="glass-blob absolute -left-32 -top-32 h-96 w-96 rounded-full opacity-30 blur-3xl transition-transform duration-700 ease-out"
+        className="absolute -left-32 -top-32 h-96 w-96 rounded-full opacity-20 blur-3xl"
         style={{ background: 'radial-gradient(circle, #2E5CFF 0%, transparent 70%)' }}
       />
       <div
-        className="glass-blob absolute -right-32 top-1/4 h-[500px] w-[500px] rounded-full opacity-20 blur-3xl transition-transform duration-700 ease-out"
+        className="absolute -right-32 top-1/4 h-[500px] w-[500px] rounded-full opacity-15 blur-3xl"
         style={{ background: 'radial-gradient(circle, #8B5CF6 0%, transparent 70%)' }}
       />
       <div
-        className="glass-blob absolute -bottom-32 left-1/3 h-[400px] w-[400px] rounded-full opacity-25 blur-3xl transition-transform duration-700 ease-out"
+        className="absolute -bottom-32 left-1/3 h-[400px] w-[400px] rounded-full opacity-20 blur-3xl"
         style={{ background: 'radial-gradient(circle, #06B6D4 0%, transparent 70%)' }}
       />
       
