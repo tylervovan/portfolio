@@ -41,6 +41,7 @@ export function Skills() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Title animation
       gsap.from('.skills-title', {
         opacity: 0,
         y: 40,
@@ -49,18 +50,27 @@ export function Skills() {
         scrollTrigger: {
           trigger: '.skills-title',
           start: 'top 85%',
+          once: true,
         },
       })
 
-      gsap.from('.skill-icon', {
-        opacity: 0,
-        scale: 0.8,
-        duration: 0.5,
-        ease: 'back.out(1.7)',
-        stagger: 0.05,
-        scrollTrigger: {
-          trigger: '.skills-grid',
-          start: 'top 80%',
+      // Skills icons - staggered reveal on scroll
+      const skillIcons = gsap.utils.toArray('.skill-icon')
+      gsap.set(skillIcons, { opacity: 0, scale: 0.8, y: 20 })
+      
+      ScrollTrigger.create({
+        trigger: '.skills-grid',
+        start: 'top 80%',
+        once: true,
+        onEnter: () => {
+          gsap.to(skillIcons, {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 0.5,
+            ease: 'back.out(1.7)',
+            stagger: 0.04, // 40ms between each icon
+          })
         },
       })
     }, sectionRef)
