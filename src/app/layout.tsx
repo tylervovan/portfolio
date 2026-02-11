@@ -11,10 +11,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Tyler Vovan | Portfolio',
-  description: 'CS Student · Polymarket Builder · Creating things that matter',
+  description: 'CS Student · Builder · Creating things that matter',
   openGraph: {
     title: 'Tyler Vovan | Portfolio',
-    description: 'CS Student · Polymarket Builder · Creating things that matter',
+    description: 'CS Student · Builder · Creating things that matter',
     type: 'website',
   },
 }
