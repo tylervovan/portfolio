@@ -37,15 +37,17 @@ export function DitherSphere() {
     const maxDotSize = 4
     let rotation = 0
 
-    // Animate position based on scroll
+    // Animate position based on scroll - oscillate side to side
     const scrollTrigger = ScrollTrigger.create({
       trigger: document.body,
       start: 'top top',
       end: 'bottom bottom',
       scrub: 1,
       onUpdate: (self) => {
-        // Start centered (0), move to right (+30%) as you scroll down
-        positionRef.current.x = self.progress * window.innerWidth * 0.3
+        // Sine wave oscillation: completes ~2 full cycles over the page
+        // Starts centered, moves right, back to center, left, center, right...
+        const oscillation = Math.sin(self.progress * Math.PI * 4)
+        positionRef.current.x = oscillation * window.innerWidth * 0.25
       },
     })
 
