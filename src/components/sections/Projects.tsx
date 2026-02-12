@@ -18,17 +18,17 @@ const projects = [
     color: '#EF4444', // Red (Japanese flag inspired)
   },
   {
-    title: 'Medivision',
+    title: 'MediVision',
     description: 'AI-powered health screening mobile app. Uses computer vision to detect potential health issues from user-submitted images.',
     tags: ['React Native', 'TypeScript', 'AI/ML', 'Mobile'],
-    link: '#',
+    link: 'https://landing-medivision.vercel.app/',
     color: '#10B981', // Green
   },
   {
     title: 'SC Robotics',
     description: 'Building the GUI and integrating science system hardware with the new control system for Saddleback College Robotics competition rover.',
     tags: ['Python', 'ROS2', 'Foxglove', 'Hardware'],
-    link: 'https://github.com/SaddlebackCollegeRobotics',
+    link: 'https://saddlebackcollegerobotics.com/index.html',
     color: '#F59E0B', // Amber
   },
 ]
