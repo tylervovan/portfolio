@@ -14,7 +14,7 @@ const projects = [
     title: 'Genki Reference',
     description: 'Japanese language learning tool for Genki textbook users. Quick reference for vocabulary, kanji, and grammar with search and flashcard features.',
     tags: ['TypeScript', 'React', 'Education', 'i18n'],
-    link: 'https://github.com/tylervovan/genki_reference',
+    link: 'https://genki-reference.vercel.app',
     color: '#EF4444', // Red (Japanese flag inspired)
   },
   {
