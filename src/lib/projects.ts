@@ -18,14 +18,14 @@ export const projects: Project[] = [
     tags: ['TypeScript', 'Bun', 'Hono', 'Next.js', 'WebSocket'],
     featured: true,
   },
-  {
-    slug: 'peptide-place',
-    name: 'Peptide Place',
-    description:
-      'Full-stack e-commerce platform for research peptides with admin dashboard, product management, and lab report uploads.',
-    tags: ['Next.js', 'Supabase', 'Vercel', 'TypeScript'],
-    featured: true,
-  },
+  // {
+  //   slug: 'peptide-place',
+  //   name: 'Peptide Place',
+  //   description:
+  //     'Full-stack e-commerce platform for research peptides with admin dashboard, product management, and lab report uploads.',
+  //   tags: ['Next.js', 'Supabase', 'Vercel', 'TypeScript'],
+  //   featured: true,
+  // },
   {
     slug: 'genki',
     name: 'Genki Reference',
